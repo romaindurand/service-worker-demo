@@ -1,4 +1,5 @@
 this.addEventListener("fetch", event => {
-	debugger;
-	//inspect event.request.url
+	event.respondWith(
+		new Response("Hello !")
+	);
 });
