@@ -1,5 +1,8 @@
 this.addEventListener("fetch", event => {
-	event.respondWith(
-		new Response("Hello !")
-	);
+	const url = new URL(event.request.url);
+	if (url.pathname.endsWith(".jpg")) {
+		event.respondWith(
+			fetch("images/haha.jpg")
+		);
+	}
 });
