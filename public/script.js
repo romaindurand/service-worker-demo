@@ -7,3 +7,7 @@ fetch("images.json")
 		document.getElementById("imagesContainer").appendChild(img);
 	});
 });
+
+if (navigator.serviceWorker) {
+	navigator.serviceWorker.register("/sw.js");
+}
